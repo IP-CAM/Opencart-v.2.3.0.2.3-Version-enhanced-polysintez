@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+  <name>Form 2304</name>
+  <code>form2304</code>
+  <version>1.0</version>
+  <author>Web studio 2304</author>
+  <link>http://2304.ru</link>
+  <file path="catalog/model/extension/module.php">
+    <operation>
+      <search><![CDATA[
+        return json_decode($query->row['setting'], true);
+        ]]></search>
+        <add position="replace"><![CDATA[
+          $setting = json_decode($query->row['setting'], true);
+          $setting['code'] = $module_id;
+          return $setting;
+        ]]></add>
+    </operation>
+  </file>
+</modification>

@@ -1,0 +1,15 @@
+.custom_banner {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #333;
+  line-height: 35px;
+  margin-bottom: 20px;
+  overflow: auto;
+  padding: 10px;
+}
+.custom_banner .fa-3x {
+  color: #229ac8;
+  float: left;
+  font-size: 3em;
+  margin-right: 10px;
+}

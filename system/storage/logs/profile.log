@@ -1,0 +1,280 @@
+2017-08-01 12:39:43.280 page started: /
+2017-08-01 12:39:46.110 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-01 12:39:48.921 page started: /
+2017-08-01 12:39:51.799 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-01 12:40:27.850 page started: /
+2017-08-01 12:40:28.281 page finished: / - 430.6 ms
+2017-08-01 12:40:30.850 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-01 12:40:30.890 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 40.3 ms
+2017-08-01 13:10:37.990 page started: /
+2017-08-01 13:10:38.518 page finished: / - 527.5 ms
+2017-08-01 13:10:41.002 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-01 13:10:41.058 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 55.4 ms
+2017-08-01 16:45:54.973 page started: /
+2017-08-01 16:45:55.507 page finished: / - 533.2 ms
+2017-08-01 16:45:57.816 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-01 16:45:57.880 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 63.5 ms
+2017-08-01 16:54:09.954 page started: /
+2017-08-01 16:54:10.380 page finished: / - 426.0 ms
+2017-08-01 16:54:12.652 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-01 16:54:12.707 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 54.6 ms
+2017-08-01 16:54:59.606 page started: /
+2017-08-01 16:54:59.941 page finished: / - 335.4 ms
+2017-08-01 16:55:02.413 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-01 16:55:02.473 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 59.2 ms
+2017-08-01 16:57:35.170 page started: /
+2017-08-01 16:57:35.474 page finished: / - 303.8 ms
+2017-08-01 16:57:37.769 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-01 16:57:37.828 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 59.2 ms
+2017-08-01 16:59:02.073 page started: /
+2017-08-01 16:59:02.453 page finished: / - 379.9 ms
+2017-08-01 16:59:04.858 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-01 16:59:04.922 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 63.3 ms
+2017-08-01 17:05:55.658 page started: /
+2017-08-01 17:05:55.967 page finished: / - 309.2 ms
+2017-08-01 17:05:58.212 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-01 17:05:58.252 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 39.5 ms
+2017-08-01 17:13:03.713 page started: /
+2017-08-01 17:13:04.093 page finished: / - 380.3 ms
+2017-08-01 17:13:06.221 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-01 17:13:06.264 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 42.5 ms
+2017-08-01 17:19:59.623 page started: /
+2017-08-01 17:19:59.985 page finished: / - 361.6 ms
+2017-08-01 17:20:02.872 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-01 17:20:02.959 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 86.3 ms
+2017-08-01 17:21:57.765 page started: /
+2017-08-01 17:21:58.295 page finished: / - 530.2 ms
+2017-08-01 17:22:00.457 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-01 17:22:00.497 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 39.3 ms
+2017-08-01 17:23:01.333 page started: /
+2017-08-01 17:23:01.754 page finished: / - 421.1 ms
+2017-08-01 17:23:04.197 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-01 17:23:04.246 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 48.2 ms
+2017-08-07 13:16:23.414 page started: /
+2017-08-07 13:16:23.769 page finished: / - 353.1 ms
+2017-08-07 13:16:26.904 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-07 13:16:26.943 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 38.9 ms
+2017-08-07 13:19:36.082 page started: /
+2017-08-07 13:19:36.532 page finished: / - 449.8 ms
+2017-08-07 13:19:39.132 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-07 13:19:39.174 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 40.9 ms
+2017-08-15 10:59:14.212 page started: /
+2017-08-15 10:59:14.571 page finished: / - 357.5 ms
+2017-08-15 10:59:17.105 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-15 10:59:17.160 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 54.2 ms
+2017-08-15 10:59:28.478 page started: /
+2017-08-15 10:59:28.915 page finished: / - 436.2 ms
+2017-08-15 10:59:32.097 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-15 10:59:32.162 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 64.4 ms
+2017-08-15 10:59:43.744 page started: /
+2017-08-15 10:59:44.103 page finished: / - 358.5 ms
+2017-08-15 10:59:47.008 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-15 10:59:47.069 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 61.1 ms
+2017-08-15 11:01:49.357 page started: /
+2017-08-15 11:01:49.758 page finished: / - 400.9 ms
+2017-08-15 11:01:52.707 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-15 11:01:52.746 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 38.9 ms
+2017-08-15 11:02:15.644 page started: /
+2017-08-15 11:02:15.996 page finished: / - 351.4 ms
+2017-08-15 11:02:19.157 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-15 11:02:19.206 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 48.5 ms
+2017-08-15 11:04:59.986 page started: /image/cache/e1f6f2d45dd59245e5c0255579bf9686.svg
+2017-08-15 11:05:00.089 page finished: /image/cache/e1f6f2d45dd59245e5c0255579bf9686.svg - 103.3 ms
+2017-08-15 11:05:17.253 page started: /
+2017-08-15 11:05:19.245 page finished: / - 1992.3 ms
+2017-08-15 11:05:20.189 page started: /media/Roboto/Roboto-Regular.ttf
+2017-08-15 11:05:20.261 page started: /media/Roboto/Roboto-Bold.ttf
+2017-08-15 11:05:20.433 page finished: /media/Roboto/Roboto-Regular.ttf - 244.3 ms
+2017-08-15 11:05:20.736 page finished: /media/Roboto/Roboto-Bold.ttf - 474.8 ms
+2017-08-15 11:05:22.660 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-15 11:05:22.741 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 81.4 ms
+2017-08-15 11:05:40.045 page started: /meshki-zelenyie-55x95-sm
+2017-08-15 11:05:40.454 page finished: /meshki-zelenyie-55x95-sm - 409.2 ms
+2017-08-15 11:05:41.056 page started: /media/Roboto/Roboto-Regular.ttf
+2017-08-15 11:05:41.079 page started: /media/Roboto/Roboto-Bold.ttf
+2017-08-15 11:05:41.400 page finished: /media/Roboto/Roboto-Regular.ttf - 344.2 ms
+2017-08-15 11:05:41.674 page finished: /media/Roboto/Roboto-Bold.ttf - 594.7 ms
+2017-08-15 11:05:42.044 page started: /index.php?route=product/product/review&product_id=1920
+2017-08-15 11:05:42.100 page finished: /index.php?route=product/product/review&product_id=1920 - 55.8 ms
+2017-08-15 11:05:42.136 page started: /index.php?route=module/progroman/city_manager/init&url=%2Fmeshki-zelenyie-55x95-sm
+2017-08-15 11:05:42.190 page started: /meshki-zelenyie-55x95-sm?_rnd=q2zzcnyv6n9
+2017-08-15 11:05:42.223 page finished: /index.php?route=module/progroman/city_manager/init&url=%2Fmeshki-zelenyie-55x95-sm - 85.9 ms
+2017-08-15 11:06:43.615 page started: /meshki-zelenyie-55x95-sm
+2017-08-15 11:06:44.000 page finished: /meshki-zelenyie-55x95-sm - 384.6 ms
+2017-08-15 11:06:44.585 page started: /media/Roboto/Roboto-Regular.ttf
+2017-08-15 11:06:44.596 page started: /media/Roboto/Roboto-Bold.ttf
+2017-08-15 11:06:45.131 page started: /index.php?route=product/product/review&product_id=1920
+2017-08-15 11:06:45.256 page started: /index.php?route=module/progroman/city_manager/init&url=%2Fmeshki-zelenyie-55x95-sm
+2017-08-15 11:06:45.312 page started: /meshki-zelenyie-55x95-sm?_rnd=p2vuf1zyern
+2017-08-15 11:06:45.397 page finished: /media/Roboto/Roboto-Bold.ttf - 800.2 ms
+2017-08-15 11:06:45.445 page finished: /index.php?route=product/product/review&product_id=1920 - 313.2 ms
+2017-08-15 11:06:45.485 page finished: /index.php?route=module/progroman/city_manager/init&url=%2Fmeshki-zelenyie-55x95-sm - 229.3 ms
+2017-08-15 11:07:01.818 page started: /
+2017-08-15 11:07:02.997 page finished: / - 1178.0 ms
+2017-08-15 11:07:04.067 page started: /media/Roboto/Roboto-Regular.ttf
+2017-08-15 11:07:04.078 page started: /media/Roboto/Roboto-Bold.ttf
+2017-08-15 11:07:04.368 page finished: /media/Roboto/Roboto-Regular.ttf - 300.7 ms
+2017-08-15 11:07:04.810 page finished: /media/Roboto/Roboto-Bold.ttf - 731.9 ms
+2017-08-15 11:07:09.554 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-15 11:07:09.602 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 47.3 ms
+2017-08-15 11:08:57.301 page started: /
+2017-08-15 11:08:58.017 page finished: / - 715.6 ms
+2017-08-15 11:08:58.788 page started: /media/Roboto/Roboto-Regular.ttf
+2017-08-15 11:08:58.823 page started: /media/Roboto/Roboto-Bold.ttf
+2017-08-15 11:08:59.054 page finished: /media/Roboto/Roboto-Regular.ttf - 265.2 ms
+2017-08-15 11:08:59.308 page finished: /media/Roboto/Roboto-Bold.ttf - 484.7 ms
+2017-08-15 11:09:01.991 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-15 11:09:02.048 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 57.0 ms
+2017-08-15 11:09:04.291 page started: /polietilenovyie-plenki/
+2017-08-15 11:09:05.074 page started: /polietilenovyie-plenki/vozdushno-puzyrchataya-plenka/
+2017-08-15 11:09:05.148 page finished: /polietilenovyie-plenki/ - 857.3 ms
+2017-08-15 11:09:05.630 page finished: /polietilenovyie-plenki/vozdushno-puzyrchataya-plenka/ - 555.6 ms
+2017-08-15 11:09:06.081 page started: /media/Roboto/Roboto-Regular.ttf
+2017-08-15 11:09:06.087 page started: /media/Roboto/Roboto-Bold.ttf
+2017-08-15 11:09:06.351 page finished: /media/Roboto/Roboto-Regular.ttf - 269.1 ms
+2017-08-15 11:09:06.509 page started: /index.php?route=module/progroman/city_manager/init&url=%2Fpolietilenovyie-plenki%2Fvozdushno-puzyrchataya-plenka%2F
+2017-08-15 11:09:06.772 page finished: /media/Roboto/Roboto-Bold.ttf - 684.8 ms
+2017-08-15 11:09:06.805 page finished: /index.php?route=module/progroman/city_manager/init&url=%2Fpolietilenovyie-plenki%2Fvozdushno-puzyrchataya-plenka%2F - 296.1 ms
+2017-08-15 11:09:13.023 page started: /
+2017-08-15 11:09:13.899 page finished: / - 875.4 ms
+2017-08-15 11:09:14.346 page started: /media/Roboto/Roboto-Regular.ttf
+2017-08-15 11:09:14.349 page started: /media/Roboto/Roboto-Bold.ttf
+2017-08-15 11:09:14.609 page finished: /media/Roboto/Roboto-Regular.ttf - 263.0 ms
+2017-08-15 11:09:15.114 page finished: /media/Roboto/Roboto-Bold.ttf - 764.8 ms
+2017-08-15 11:09:17.096 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-15 11:09:17.139 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 42.8 ms
+2017-08-15 11:13:04.273 page started: /image/cache/e1f6f2d45dd59245e5c0255579bf9686.svg
+2017-08-15 11:13:04.627 page finished: /image/cache/e1f6f2d45dd59245e5c0255579bf9686.svg - 354.2 ms
+2017-08-15 11:19:55.481 page started: /
+2017-08-15 11:19:56.457 page finished: / - 975.6 ms
+2017-08-15 11:19:56.995 page started: /media/Roboto/Roboto-Regular.ttf
+2017-08-15 11:19:57.062 page started: /media/Roboto/Roboto-Bold.ttf
+2017-08-15 11:19:57.440 page finished: /media/Roboto/Roboto-Regular.ttf - 444.2 ms
+2017-08-15 11:19:57.746 page finished: /media/Roboto/Roboto-Bold.ttf - 682.8 ms
+2017-08-15 11:19:59.522 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-15 11:19:59.558 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 35.4 ms
+2017-08-15 11:21:14.189 page started: /
+2017-08-15 11:21:15.096 page finished: / - 906.1 ms
+2017-08-15 11:21:15.721 page started: /media/Roboto/Roboto-Bold.ttf
+2017-08-15 11:21:15.721 page started: /media/Roboto/Roboto-Regular.ttf
+2017-08-15 11:21:16.141 page finished: /media/Roboto/Roboto-Bold.ttf - 419.3 ms
+2017-08-15 11:21:16.434 page finished: /media/Roboto/Roboto-Regular.ttf - 712.3 ms
+2017-08-15 11:21:17.752 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-15 11:21:17.802 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 50.1 ms
+2017-08-15 13:41:48.141 page started: /image/cache/e1f6f2d45dd59245e5c0255579bf9686.svg
+2017-08-15 13:41:48.490 page finished: /image/cache/e1f6f2d45dd59245e5c0255579bf9686.svg - 348.9 ms
+2017-08-15 13:42:04.215 page started: /
+2017-08-15 13:42:04.580 page finished: / - 365.6 ms
+2017-08-15 13:42:08.484 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-15 13:42:08.544 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 59.1 ms
+2017-08-15 13:42:15.114 page started: /image/cache/e1f6f2d45dd59245e5c0255579bf9686.svg
+2017-08-15 13:42:15.220 page finished: /image/cache/e1f6f2d45dd59245e5c0255579bf9686.svg - 106.5 ms
+2017-08-15 13:42:25.907 page started: /
+2017-08-15 13:42:26.860 page finished: / - 953.1 ms
+2017-08-15 13:42:27.436 page started: /media/Roboto/Roboto-Regular.ttf
+2017-08-15 13:42:27.436 page started: /media/Roboto/Roboto-Bold.ttf
+2017-08-15 13:42:27.856 page finished: /media/Roboto/Roboto-Bold.ttf - 419.4 ms
+2017-08-15 13:42:28.257 page finished: /media/Roboto/Roboto-Regular.ttf - 820.9 ms
+2017-08-15 13:42:31.098 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-15 13:42:31.132 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 34.0 ms
+2017-08-15 13:42:33.675 page started: /
+2017-08-15 13:42:34.408 page finished: / - 733.4 ms
+2017-08-15 13:42:35.263 page started: /media/Roboto/Roboto-Regular.ttf
+2017-08-15 13:42:35.279 page started: /media/Roboto/Roboto-Bold.ttf
+2017-08-15 13:42:35.526 page finished: /media/Roboto/Roboto-Regular.ttf - 263.4 ms
+2017-08-15 13:42:35.787 page finished: /media/Roboto/Roboto-Bold.ttf - 507.9 ms
+2017-08-15 13:42:37.108 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-15 13:42:37.146 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 37.9 ms
+2017-08-15 13:42:43.917 page started: /image/cache/e1f6f2d45dd59245e5c0255579bf9686.svg
+2017-08-15 13:42:50.311 page started: /
+2017-08-15 13:42:50.662 page finished: / - 351.1 ms
+2017-08-15 13:42:53.639 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-15 13:42:53.678 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 38.4 ms
+2017-08-15 13:47:05.307 page started: /image/cache/e1f6f2d45dd59245e5c0255579bf9686.svg
+2017-08-15 13:47:05.462 page finished: /image/cache/e1f6f2d45dd59245e5c0255579bf9686.svg - 155.1 ms
+2017-08-15 13:47:13.663 page started: /
+2017-08-15 13:47:15.182 page finished: / - 1518.5 ms
+2017-08-15 13:47:15.824 page started: /media/Roboto/Roboto-Regular.ttf
+2017-08-15 13:47:15.845 page started: /media/Roboto/Roboto-Bold.ttf
+2017-08-15 13:47:16.270 page finished: /media/Roboto/Roboto-Regular.ttf - 446.6 ms
+2017-08-15 13:47:16.823 page finished: /media/Roboto/Roboto-Bold.ttf - 977.7 ms
+2017-08-15 13:47:17.784 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-15 13:47:17.844 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 60.2 ms
+2017-08-15 13:47:37.575 page started: /
+2017-08-15 13:47:38.848 page finished: / - 1272.6 ms
+2017-08-15 13:47:39.446 page started: /media/Roboto/Roboto-Regular.ttf
+2017-08-15 13:47:39.509 page started: /media/Roboto/Roboto-Bold.ttf
+2017-08-15 13:47:40.743 page finished: /media/Roboto/Roboto-Regular.ttf - 1296.4 ms
+2017-08-15 13:47:41.220 page finished: /media/Roboto/Roboto-Bold.ttf - 1710.3 ms
+2017-08-15 13:47:41.930 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-15 13:47:42.128 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 198.1 ms
+2017-08-15 13:48:57.949 page started: /media/Roboto/Roboto-Regular.ttf
+2017-08-15 13:49:00.405 page started: /media/Roboto/Roboto-Bold.ttf
+2017-08-15 13:49:39.754 page started: /media/Roboto/Roboto-Regular.ttf
+2017-08-15 13:49:40.307 page finished: /media/Roboto/Roboto-Regular.ttf - 552.5 ms
+2017-08-15 13:49:40.732 page started: /media/Roboto/Roboto-Regular.ttf
+2017-08-15 13:49:40.807 page started: /media/Roboto/Roboto-Bold.ttf
+2017-08-15 13:49:41.058 page started: /index.php?route=module/progroman/city_manager/init&url=%2Fmedia%2FRoboto%2FRoboto-Regular.ttf
+2017-08-15 13:49:41.794 page finished: /media/Roboto/Roboto-Bold.ttf - 986.5 ms
+2017-08-15 13:49:41.843 page finished: /index.php?route=module/progroman/city_manager/init&url=%2Fmedia%2FRoboto%2FRoboto-Regular.ttf - 785.3 ms
+2017-08-15 13:50:39.977 page started: /image/cache/e1f6f2d45dd59245e5c0255579bf9686.svg
+2017-08-15 13:50:40.459 page finished: /image/cache/e1f6f2d45dd59245e5c0255579bf9686.svg - 481.3 ms
+2017-08-15 14:35:54.690 page started: /
+2017-08-15 14:35:55.045 page finished: / - 355.4 ms
+2017-08-15 14:36:03.257 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-15 14:36:03.310 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 52.7 ms
+2017-08-31 10:19:58.856 page started: /
+2017-08-31 10:19:59.561 page finished: / - 703.2 ms
+2017-08-31 10:20:05.639 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-31 10:20:05.716 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 77.0 ms
+2017-08-31 10:20:08.833 page started: /
+2017-08-31 10:20:09.681 page finished: / - 848.0 ms
+2017-08-31 10:20:12.131 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-31 10:20:12.218 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 86.2 ms
+2017-08-31 10:21:10.708 page started: /
+2017-08-31 10:21:11.704 page finished: / - 995.9 ms
+2017-08-31 10:21:14.457 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-31 10:21:14.498 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 41.0 ms
+2017-08-31 10:21:17.258 page started: /
+2017-08-31 10:21:18.049 page finished: / - 791.5 ms
+2017-08-31 10:21:20.585 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-31 10:21:20.651 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 66.1 ms
+2017-08-31 10:22:00.989 page started: /
+2017-08-31 10:22:02.278 page finished: / - 1288.3 ms
+2017-08-31 10:22:08.738 page started: /
+2017-08-31 10:22:09.681 page finished: / - 942.2 ms
+2017-08-31 10:22:12.669 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-31 10:22:12.719 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 49.7 ms
+2017-08-31 10:22:24.998 page started: /
+2017-08-31 10:22:25.728 page finished: / - 730.2 ms
+2017-08-31 10:22:28.730 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-31 10:22:28.776 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 45.9 ms
+2017-08-31 10:23:08.034 page started: /
+2017-08-31 10:23:08.893 page finished: / - 859.2 ms
+2017-08-31 10:23:11.812 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-31 10:23:11.861 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 48.4 ms
+2017-08-31 10:23:43.572 page started: /polietilenovyie-plenki/vozdushno-puzyrchataya-plenka/
+2017-08-31 10:23:44.009 page finished: /polietilenovyie-plenki/vozdushno-puzyrchataya-plenka/ - 437.2 ms
+2017-08-31 10:23:45.396 page started: /index.php?route=module/progroman/city_manager/init&url=%2Fpolietilenovyie-plenki%2Fvozdushno-puzyrchataya-plenka%2F
+2017-08-31 10:23:45.435 page finished: /index.php?route=module/progroman/city_manager/init&url=%2Fpolietilenovyie-plenki%2Fvozdushno-puzyrchataya-plenka%2F - 38.8 ms
+2017-08-31 10:24:52.932 page started: /
+2017-08-31 10:24:53.652 page finished: / - 720.3 ms
+2017-08-31 10:24:56.837 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-31 10:24:56.894 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 57.0 ms
+2017-08-31 10:25:50.011 page started: /image/cache/e1f6f2d45dd59245e5c0255579bf9686.svg
+2017-08-31 10:26:39.860 page started: /
+2017-08-31 10:26:40.591 page finished: / - 729.1 ms
+2017-08-31 10:26:44.053 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-31 10:26:44.100 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 47.6 ms
+2017-08-31 10:27:41.272 page started: /
+2017-08-31 10:27:42.029 page finished: / - 756.2 ms
+2017-08-31 10:27:45.163 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-31 10:27:45.211 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 47.9 ms
+2017-08-31 10:35:50.265 page started: /
+2017-08-31 10:35:51.317 page finished: / - 1051.7 ms
+2017-08-31 10:35:55.112 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-31 10:35:55.153 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 40.2 ms
+2017-08-31 13:00:10.500 page started: /
+2017-08-31 13:00:11.322 page finished: / - 821.2 ms
+2017-08-31 13:00:18.517 page started: /index.php?route=module/progroman/city_manager/init&url=%2F
+2017-08-31 13:00:18.559 page finished: /index.php?route=module/progroman/city_manager/init&url=%2F - 41.2 ms

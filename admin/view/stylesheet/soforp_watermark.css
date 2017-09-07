@@ -1,0 +1,60 @@
+.draggable-zone {
+    background: #000 none 0 0 no-repeat;
+    border:     1px solid #CCCCCC;
+
+    height:     300px;
+    width:      300px;
+    overflow:   hidden;
+}
+
+.ui-wrapper {
+    overflow:   visible !important;
+}
+
+.ui-resizable-handle {
+    background:    #f5dc58;
+    border:        1px solid #FFF;
+
+    z-index:    2;
+}
+
+.ui-rotatable-handle {
+    background:    #f5dc58;
+    border:        1px solid #FFF;
+    border-radius: 10px;
+    -moz-border-radius:    10px;
+    -o-border-radius:      10px;
+    -webkit-border-radius: 10px;
+    cursor:        pointer;
+
+    height:        20px;
+    left:          50%;
+    margin:        0 0 0 -10px;
+    position:      absolute;
+    top:           -30px;
+    width:         20px;
+}
+
+#ctrl_watermark_status_0,
+#ctrl_watermark_debug_0,
+#ctrl_watermark_hide_real_path_0,
+#ctrl_watermark_status_1,
+#ctrl_watermark_debug_1,
+#ctrl_watermark_hide_real_path_1
+{
+    width: 300px;
+}
+
+
+#ctrl_watermark_min_width_0,
+#ctrl_watermark_min_height_0,
+#ctrl_watermark_max_width_0,
+#ctrl_watermark_max_height_0,
+#ctrl_watermark_min_width_1,
+#ctrl_watermark_min_height_1,
+#ctrl_watermark_max_width_1,
+#ctrl_watermark_max_height_1
+{
+    width: 100px;
+    display: inline-block;
+}

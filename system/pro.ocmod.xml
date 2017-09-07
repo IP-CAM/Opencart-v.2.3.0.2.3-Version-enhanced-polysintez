@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+	<name>Pro</name>
+	<code>OT_1.0</code>
+	<version>1.0.0</version>
+	<author>opencart.pro</author>
+	<link>http://opencart.pro</link>
+	<file path="admin/controller/common/column_left.php">
+		<operation>
+		<search><![CDATA[// Stats]]></search>
+			<add position="before"><![CDATA[
+			// Pro
+			$pro = array();
+			
+			if ($this->user->hasPermission('access', 'pro/license')) {		
+				$pro[] = array(
+					'name'	   => $this->language->get('text_license'),
+					'href'     => $this->url->link('pro/license', 'token=' . $this->session->data['token'], true),
+					'children' => array()
+				);
+			}
+			
+			if ($pro) {	
+				$data['menus'][] = array(
+					'id'       => 'menu-pro',
+					'icon'	   => 'fa-tasks', 
+					'name'	   => $this->language->get('text_pro'),
+					'href'     => '',
+					'children' => $pro
+				);	
+			}
+		// Pro
+		]]></add>
+		</operation>
+	</file>
+	<file path="admin/language/ru-ru/common/column_left.php">
+		<operation>
+		<search><![CDATA[$_['text_other_status']]]></search>
+			<add position="before"><![CDATA[
+			// Pro
+			$_['text_pro']                = '.Pro';
+			$_['text_license']            = 'Лицензия';
+		// Pro
+		]]></add>
+		</operation>
+	</file>
+	<file path="admin/language/en-en/common/column_left.php">
+		<operation>
+		<search><![CDATA[$_['text_other_status']]]></search>
+			<add position="before"><![CDATA[
+			// Pro
+			$_['text_pro']                = '.Pro';
+			$_['text_license']            = 'License';
+		// Pro
+		]]></add>
+		</operation>
+	</file>
+	<file path="catalog/controller/common/header.php">
+		<operation>
+		<search><![CDATA[$data['search'] = $this->load->controller('common/search');]]></search>
+			<add position="after"><![CDATA[
+			if ($this->config->get('alphabetm_status')) {
+			$data['alphabetm'] = $this->load->controller('extension/module/alphabetm');
+		} else {
+			$data['alphabetm'] = '';
+		}
+			]]></add>
+		</operation>
+	</file>
+	<file path="catalog/view/theme/*/template/common/header.tpl">
+		<operation>
+		<search index="1"><![CDATA[</nav>]]></search>
+			<add position="after" ><![CDATA[<div class="container"><?php echo $alphabetm; ?></div>
+			]]></add>
+		</operation>
+	</file>
+</modification>

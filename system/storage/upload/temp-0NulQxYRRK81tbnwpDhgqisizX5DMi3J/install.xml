@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <name>NeoSeo Redirect Manager</name>
+    <version>10</version>
+    <code>soforp-redirect-manager</code>
+    <author>Alexander Sorokin</author>
+	
+    <file path="admin/controller/common/menu.php">
+        <operation>
+            <search><![CDATA[$data['backup']]]></search>
+            <add position="after"><![CDATA[
+        /* NeoSeo Redirect Manager - begin */
+        $data['soforp_redirect_manager'] = false;
+        if( isset($this->session->data['token']) ) {
+            if( $this->user->hasPermission('access','tool/soforp_redirect_manager') && $this->config->get("soforp_redirect_manager_status") ){
+                $this->language->load("tool/soforp_redirect_manager");
+                $data['text_soforp_redirect_manager'] = $this->language->get("text_soforp_redirect_manager");
+                $data['soforp_redirect_manager'] = $this->url->link('tool/soforp_redirect_manager', 'token=' .$this->session->data['token'], 'SSL');
+            }
+        }
+        /* NeoSeo Redirect Manager - begin */
+            ]]></add>
+        </operation>
+    </file>
+	
+    <file path="admin/view/template/common/menu.tpl">
+        <operation>
+            <search><![CDATA[<a href="<?php echo $backup; ?>"><?php echo $text_backup; ?></a>]]></search>
+            <add position="before"><![CDATA[
+            <?php if( $soforp_redirect_manager ) { ?><li><a href="<?php echo $soforp_redirect_manager; ?>"><?php echo $text_soforp_redirect_manager; ?></a></li><?php } ?>
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="system/engine/front.php">
+        <operation>
+            <search><![CDATA[public function dispatch]]></search>
+            <add position="after"> <![CDATA[
+        // NeoSeo Redirect Manager - begin
+        if ( ( defined('REDIRECT_ENABLED') || (!defined('HTTP_CATALOG') && isset($_SERVER['HTTP_HOST']) ) ) && $this->registry->get("config")->get('soforp_redirect_manager_status') == 1 ) {
+            $this->registry->get("load")->model('tool/soforp_redirect_manager');
+            $this->registry->get("model_tool_soforp_redirect_manager")->checkUrl();
+        }
+        // NeoSeo Redirect Manager - end
+                ]]></add>
+        </operation>
+    </file>
+</modification>

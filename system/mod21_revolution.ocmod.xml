@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+	<name>Шаблон Revolution | Фикс ocmod</name>
+	<code>mod21_revolution</code>
+	<version>3.1</version>
+	<author>pikitos</author>
+	<link></link>
+
+	<file path="admin/controller/extension/modification.php">
+		<operation error="skip">
+			<search><![CDATA[if ($error == 'skip') {]]></search>
+			<add position="replace" offset="1"><![CDATA[
+				if ($error == 'skip') {
+				$log[] = 'NOT FOUND - OPERATION SKIPPED!';
+				continue;
+			]]></add>
+		</operation>
+	</file>
+	
+</modification>

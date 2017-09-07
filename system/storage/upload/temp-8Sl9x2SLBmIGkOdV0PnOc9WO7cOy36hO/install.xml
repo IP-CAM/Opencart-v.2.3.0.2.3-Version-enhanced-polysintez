@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+  <name>Производители (выпадающее меню Алфавитный указатель и Логотипы)</name>
+  <code>manufacturer_nesting</code>
+  <version>1.4</version>
+  <author>Dmitriy Khokhlov | optimlab.ru</author>
+  <link>http://optimlab.ru</link>
+  
+    <file path="catalog/view/theme/*/template/common/footer.tpl">
+      <operation error="skip">
+        <search><![CDATA[
+</body>
+        ]]></search>
+        <add position="before"><![CDATA[
+<script src="catalog/view/javascript/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+        ]]></add>
+      </operation>
+    </file>
+    
+    <file path="catalog/view/theme/*/template/product/manufacturer_list.tpl">
+      <operation error="skip">
+        <search index="0"><![CDATA[
+          <?php foreach ($categories as $category) { ?>
+        ]]></search>
+        <add position="replace"><![CDATA[]]></add>
+      </operation>
+      <operation error="skip">
+        <search><![CDATA[
+          &nbsp;&nbsp;&nbsp;<a href="index.php?route=product/manufacturer#<?php echo $category['name']; ?>"><?php echo $category['name']; ?></a>
+        ]]></search>
+        <add position="replace"><![CDATA[]]></add>
+      </operation>
+      <!-- ShopStore - шаблон для Opencart 2.x -->
+      <operation error="skip">
+        <search><![CDATA[
+          &nbsp;&nbsp;&nbsp;<a href="index.php?route=product/manufacturer#<?php echo $category['name']; ?>"><b><?php echo $category['name']; ?></b></a>
+        ]]></search>
+        <add position="replace"><![CDATA[]]></add>
+      </operation>
+      <!-- /ShopStore - шаблон для Opencart 2.x -->
+      <operation error="skip">
+        <search index="2"><![CDATA[
+          <?php } ?>
+        ]]></search>
+        <add position="replace"><![CDATA[]]></add>
+      </operation>
+      <operation error="skip">
+        <search><![CDATA[
+          <?php foreach ($categories as $category) { ?>
+        ]]></search>
+        <add position="replace"><![CDATA[       
+    <div class="btn-group" role="group" style="margin-bottom: 15px;">
+      <?php foreach ($categories as $category) { ?>
+        <?php if ($category['manufacturer']) { ?>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false">
+            <a href="index.php?route=product/manufacturer#<?php echo $category['name']; ?>"><?php echo $category['name']; ?></a>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <?php foreach ($category['manufacturer'] as $manufacturers) { ?>
+            <li><a href="<?php echo $manufacturers['href']; ?>"><?php echo $manufacturers['name']; ?></a></li>
+            <?php } ?>
+          </ul>
+        </div>
+        <?php } ?>
+      <?php } ?>
+    </div>
+        ]]></add>
+      </operation>
+
+      <operation error="skip">
+        <search><![CDATA[
+          <h2 id="<?php echo $category['name']; ?>"><?php echo $category['name']; ?></h2>
+        ]]></search>
+        <add position="replace"><![CDATA[]]></add>
+      </operation>
+      <operation error="skip">
+        <search index="1"><![CDATA[
+          <?php if ($category['manufacturer']) { ?>
+        ]]></search>
+        <add position="replace"><![CDATA[]]></add>
+      </operation>
+      <operation error="skip">
+        <search><![CDATA[
+          <?php foreach (array_chunk($category['manufacturer'], 4) as $manufacturers) { ?>
+        ]]></search>
+        <add position="replace"><![CDATA[]]></add>
+      </operation>
+      <operation error="skip">
+        <search index="1"><![CDATA[
+          <div class="row">
+        ]]></search>
+        <add position="replace"><![CDATA[]]></add>
+      </operation>
+      <operation error="skip">
+        <search><![CDATA[
+          <?php foreach ($manufacturers as $manufacturer) { ?>
+        ]]></search>
+        <add position="replace"><![CDATA[]]></add>
+      </operation>
+      <operation error="skip">
+        <search><![CDATA[
+          <div class="col-sm-3"><a href="<?php echo $manufacturer['href']; ?>"><?php echo $manufacturer['name']; ?></a></div>
+        ]]></search>
+        <add position="replace"><![CDATA[]]></add>
+      </operation>
+      <operation error="skip">
+        <search index="5"><![CDATA[
+          <?php } ?>
+        ]]></search>
+        <add position="replace"><![CDATA[]]></add>
+      </operation>
+      <operation error="skip">
+        <search index="2"><![CDATA[
+          </div>
+        ]]></search>
+        <add position="replace"><![CDATA[]]></add>
+      </operation>
+      <operation error="skip">
+        <search index="5"><![CDATA[
+          <?php } ?>
+        ]]></search>
+        <add position="replace"><![CDATA[]]></add>
+      </operation>
+      <operation error="skip">
+        <search index="5"><![CDATA[
+          <?php } ?>
+        ]]></search>
+        <add position="replace"><![CDATA[]]></add>
+      </operation>
+      <operation error="skip">
+        <search index="5"><![CDATA[
+          <?php } ?>
+        ]]></search>
+        <add position="replace"><![CDATA[]]></add>
+      </operation>
+      <operation error="skip">
+        <search index="1"><![CDATA[
+          <?php } else { ?>
+        ]]></search>
+        <add position="before"><![CDATA[       
+      <div class="row">
+      <?php foreach ($categories as $category) { ?>
+      <?php if ($category['manufacturer']) { ?>
+        <?php foreach ($category['manufacturer'] as $manufacturers) { ?>
+          <?php if ($manufacturers['image']) { ?>
+          <div class="col-xs-4 col-sm-3 col-md-2">
+            <a class="thumbnail" href="<?php echo $manufacturers['href']; ?>"><img src="<?php echo $manufacturers['image']; ?>" alt="<?php echo $manufacturers['name']; ?>" title="<?php echo $manufacturers['name']; ?>" /></a>
+          </div>
+          <?php } ?>
+        <?php } ?>
+      <?php } ?>
+      <?php } ?>
+      </div>
+        ]]></add>
+      </operation>
+    </file>
+
+  <file path="catalog/controller/product/manufacturer.php">
+	<operation error="skip">
+      <search><![CDATA[
+		$data['categories'][$key]['manufacturer'][] = array(
+      ]]></search>
+      <add position="before"><![CDATA[
+			if ($result['image']) {
+				$result['image'] = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_manufacturer_width'), $this->config->get('config_image_manufacturer_height'));
+			} else {
+				$result['image'] = '';
+			}
+      ]]></add>
+    </operation>
+	<operation error="skip">
+      <search><![CDATA[
+		$data['categories'][$key]['manufacturer'][] = array(
+      ]]></search>
+      <add position="after"><![CDATA[
+				'image' => $result['image'],
+      ]]></add>
+    </operation>
+  </file>
+</modification>

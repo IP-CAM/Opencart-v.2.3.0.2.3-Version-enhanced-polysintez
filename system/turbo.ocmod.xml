@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+<name>Opencart Turbo</name>
+<code>OT_1.0</code>
+<version>1.0.0</version>
+<author>opencart.pro</author>
+<link>http://opencart.pro</link>
+<file path="catalog/controller/common/header.php">
+	<operation>
+	<search><![CDATA[
+		$data['categories'] = array();
+	]]></search>
+	<add position="after"><![CDATA[
+	//opencart turbo start
+	
+	$cache_data = null;
+	
+	if ($this->config->get('turbo_topmenu') && $this->config->get('turbo_status')) {
+		$cache = 'turbo.menu.' . $this->language->get('code') . '.' . $this->config->get('config_store_id');
+		$cache_data = $this->cache->get($cache);
+	}
+	
+	if (!empty($cache_data) && is_array($cache_data)) {		
+		$data['categories'] = $cache_data;	
+	} else {
+	//opencart turbo end 
+	]]></add>
+	</operation>
+	<operation>
+		<search><![CDATA[$data['language'] = $this->load->controller('common/language');]]></search>
+		<add position="before"><![CDATA[
+		//opencart turbo start
+			if ($this->config->get('turbo_topmenu') && $this->config->get('turbo_status')) {
+				$this->cache->set($cache, $data['categories']);
+			}
+		}
+		//opencart turbo end 
+	]]></add>
+	</operation>
+</file>
+
+<file path="catalog/controller/product/category.php">
+	<operation>
+	<search><![CDATA[$data['categories'] = array();]]></search>
+		<add position="after"><![CDATA[
+		//opencart turbo start
+		
+		$cache_data = null;
+		
+		if ($this->config->get('turbo_subcategory') && $this->config->get('turbo_status')) {
+			$cache = 'turbo.subcategory.' . $this->language->get('code') . '.' . $this->config->get('config_store_id') . '.' . $category_id;
+			$cache_data = $this->cache->get($cache);
+		}
+		
+		if (!empty($cache_data) && is_array($cache_data)) {	
+			$data['categories'] = $cache_data;	
+		} else {		
+		///opencart turbo end 
+	]]></add>
+	</operation>
+	<operation>
+		<search><![CDATA[$data['products'] = array();]]></search>
+		<add position="before"><![CDATA[
+		//opencart turbo start
+			if ($this->config->get('turbo_subcategory') && $this->config->get('turbo_status')) {
+				$this->cache->set($cache, $data['categories']);
+			}
+		}
+		//opencart turbo end 
+	]]></add>
+	</operation>
+</file>	
+
+<file path="catalog/controller/extension/module/category.php">
+	<operation>
+	<search><![CDATA[$data['categories'] = array();]]></search>
+		<add position="after"><![CDATA[
+		//opencart turbo start
+		
+		$cache_data = null;
+		
+		if ($this->config->get('turbo_category_module') && $this->config->get('turbo_status')) {
+			$cache = 'turbo.cat_module.' . $data['category_id'] . $this->language->get('code') . '.' . $this->config->get('config_store_id');// . '.' . $category_id;
+			$cache_data = $this->cache->get($cache);
+		}
+		
+		if (!empty($cache_data) && is_array($cache_data)) {	
+			$data['categories'] = $cache_data;	
+		} else {		
+		///opencart turbo end 
+	]]></add>
+	</operation>
+	<operation>
+		<search><![CDATA[return $this->load->view('extension/module/category', $data);]]></search>
+		<add position="before"><![CDATA[
+		//opencart turbo start
+			if ($this->config->get('turbo_category_module') && $this->config->get('turbo_status')) {
+				$this->cache->set($cache, $data['categories']);
+			}
+		}
+		//opencart turbo end 
+	]]></add>
+	</operation>
+</file>	
+
+
+<file path="catalog/controller/common/footer.php">
+	<operation>
+	<search><![CDATA[$data['informations'] = array();]]></search>
+		<add position="after"><![CDATA[
+		//opencart turbo start
+		
+		$cache_data = null;
+		
+		if ($this->config->get('turbo_information') && $this->config->get('turbo_status')) {
+			$cache = 'turbo.footer_information.' . $this->language->get('code') . '.' . $this->config->get('config_store_id');
+			$cache_data = $this->cache->get($cache);
+		}
+		
+		if (!empty($cache_data) && is_array($cache_data)) {	
+			$data['informations'] = $cache_data;	
+		} else {	
+		//opencart turbo end 
+	]]></add>
+	</operation>
+	<operation>
+		<search><![CDATA[$data['contact']]]></search>
+		<add position="before"><![CDATA[
+		//opencart turbo start
+			if ($this->config->get('turbo_information') && $this->config->get('turbo_status')) {
+				$this->cache->set($cache, $data['informations']);
+			}
+		}
+		//opencart turbo end 
+	]]></add>
+	</operation>
+</file>
+
+
+<file path="catalog/controller/extension/module/bestseller.php">
+	<operation>
+	<search><![CDATA[$data['products'] = array();]]></search>
+		<add position="after"><![CDATA[
+		//opencart turbo start
+		
+		$cache_data = null;
+		
+		if ($this->config->get('turbo_bestseller_module') && $this->config->get('turbo_status')) {
+			$cache = 'turbo.category_module.' . $this->language->get('code') . '.' . (int) $this->config->get('config_store_id') . '.' . $this->session->data['currency'] . '.' . (int)$this->config->get('config_customer_group_id') . '.'  . substr(md5(serialize($setting)), 0, 8);
+			$cache_data = $this->cache->get($cache);
+		}
+	
+		if (!empty($cache_data) && is_array($cache_data)) {
+			$results = true;	
+		} else {	
+		//opencart turbo end
+	]]></add>
+	</operation>
+	<operation>
+	<search><![CDATA[if ($results) {]]></search>
+		<add position="before"><![CDATA[
+	//opencart turbo start
+		}
+	//opencart turbo end		
+	]]></add>
+	</operation>		
+	<operation>
+		<search><![CDATA[if ($results) {]]></search>
+		<add position="after"><![CDATA[
+		//opencart turbo start
+		if (is_array($results)) {
+		//opencart turbo end
+	]]></add>
+	</operation>
+	<operation>
+	<search><![CDATA[return $this->load->view('extension/module/bestseller', $data);]]></search>
+		<add position="before"><![CDATA[	
+		//opencart turbo start
+		
+			if ($this->config->get('turbo_bestseller_module') && $this->config->get('turbo_status')) {
+				$this->cache->set($cache, $data['products']);
+			};
+		
+		} else {
+			$data['products'] = $cache_data;
+		}
+		//opencart turbo end
+	]]></add>
+	</operation>
+</file>
+
+<file path="catalog/controller/extension/module/special.php">
+	<operation>
+	<search><![CDATA[$data['products'] = array();]]></search>
+		<add position="after"><![CDATA[
+		//opencart turbo start	
+		$cache_data = null;
+		
+		if ($this->config->get('turbo_special_module') && $this->config->get('turbo_status')) {
+			$cache = 'turbo.special_module.' . $this->language->get('code') . '.' . (int) $this->config->get('config_store_id') . '.' . $this->session->data['currency'] . '.' . (int)$this->config->get('config_customer_group_id') . '.' . substr(md5(serialize($setting)), 0, 8);
+			$cache_data = $this->cache->get($cache);
+		}
+			
+		if (!empty($cache_data) && is_array($cache_data)) {
+			$results = true;	
+		} else {	
+		//opencart turbo end
+	]]></add>
+	</operation>
+	<operation>
+	<search><![CDATA[if ($results) {]]></search>
+		<add position="before"><![CDATA[
+		//opencart turbo start
+			}
+		//opencart turbo end
+	]]></add>
+	</operation>		
+	<operation>
+	<search><![CDATA[if ($results) {]]></search>
+		<add position="after"><![CDATA[	
+		//opencart turbo start
+		if (is_array($results)) {
+		//opencart turbo end
+	]]></add>
+	</operation>
+	<operation>
+	<search><![CDATA[return $this->load->view('extension/module/special', $data);]]></search>
+		<add position="before"><![CDATA[			
+		//opencart turbo start
+			if ($this->config->get('turbo_special_module') && $this->config->get('turbo_status')) {
+				$this->cache->set($cache, $data['products']);
+			};
+		
+		} else {	
+			$data['products'] = $cache_data;
+		}
+		//opencart turbo end
+	]]></add>
+	</operation>
+</file>	
+
+<file path="catalog/controller/extension/module/latest.php">
+	<operation>
+	<search><![CDATA[$data['products'] = array();]]></search>
+		<add position="after"><![CDATA[
+		$cache_data = null;
+			
+		if ($this->config->get('turbo_latest_module') && $this->config->get('turbo_status')) {
+			$cache = 'turbo.latest_module.' . $this->language->get('code') . '.' . (int) $this->config->get('config_store_id') . '.' . $this->session->data['currency'] . '.' . (int)$this->config->get('config_customer_group_id') . '.'  . substr(md5(serialize($setting)), 0, 8);
+			$cache_data = $this->cache->get($cache);
+		}
+				
+		if (!empty($cache_data) && is_array($cache_data)) {
+			$results = true;	
+		} else {	
+		//opencart turbo end
+	]]></add>
+	</operation>
+	<operation>
+	<search><![CDATA[if ($results) {]]></search>
+		<add position="before"><![CDATA[		
+	//opencart turbo start
+		}
+	//opencart turbo end
+	]]></add>
+	</operation>		
+	<operation>
+	<search><![CDATA[if ($results) {]]></search>
+		<add position="after"><![CDATA[
+		//opencart turbo start
+		if (is_array($results)) {
+		//opencart turbo end		
+	]]></add>
+	</operation>
+	<operation>
+	<search><![CDATA[return $this->load->view('extension/module/latest', $data);]]></search>
+		<add position="before"><![CDATA[					
+		//opencart turbo start
+			if ($this->config->get('turbo_latest_module') && $this->config->get('turbo_status')) {
+				$this->cache->set($cache, $data['products']);
+			};
+		
+		} else {						
+			$data['products'] = $cache_data;
+		}
+		//opencart turbo end
+	]]></add>
+	</operation>
+</file>	
+
+<file path="catalog/controller/extension/module/featured.php">
+	<operation>
+	<search><![CDATA[$data['products'] = array();]]></search>
+		<add position="after"><![CDATA[
+	
+	//opencart turbo start	
+		$cache_data = null;
+		
+		if ($this->config->get('turbo_featured_module') && $this->config->get('turbo_status')) {
+			$cache = 'turbo.featured_module.' . $this->language->get('code') . '.' . (int) $this->config->get('config_store_id') . '.' . $this->session->data['currency'] . '.' . (int)$this->config->get('config_customer_group_id') . '.'  . substr(md5(serialize($setting)), 0, 8);
+			$cache_data = $this->cache->get($cache);
+		}
+			
+		if (!empty($cache_data) && is_array($cache_data)) {
+			$data['products'] = $cache_data;
+		} else {	
+	//opencart turbo end
+	]]></add>
+	</operation>		
+
+	<operation>		
+	<search><![CDATA[if ($data['products']) {]]></search>
+		<add position="before"><![CDATA[
+		//opencart turbo start	
+			if ($this->config->get('turbo_featured_module') && $this->config->get('turbo_status')) {
+				$this->cache->set($cache, $data['products']);
+			};
+					
+			}
+		//opencart turbo end 		
+	]]></add>
+	</operation>
+</file>
+
+	<file path="catalog/controller/extension/module/product_tab.php">
+	<operation error="skip">
+	<search><![CDATA[$latest_results = $this->model_catalog_product->getProducts($filter_data);]]></search>
+		<add position="replace"><![CDATA[
+		//opencart turbo start
+			if ($this->config->get('turbo_product_tab') && $this->config->get('turbo_status')) {
+				$latest_results = $this->model_catalog_product->getLatestProducts($filter_data['limit']);
+			} else {
+				$latest_results = $this->model_catalog_product->getProducts($filter_data);
+			}
+		//opencart turbo end
+	]]></add>
+	</operation>		
+</file>
+
+<file path="catalog/model/tool/image.php">
+	<operation>
+	<search><![CDATA[$image->save(DIR_IMAGE . $image_new);]]></search>
+		<add position="replace"><![CDATA[
+		//opencart turbo start
+			if ($this->config->get('turbo_global_jpg_image') && $this->config->get('turbo_global_png_image')  && $this->config->get('turbo_status')) {
+				$image->save(DIR_IMAGE . $image_new, (int)$this->config->get('turbo_global_jpg_image'), (int)$this->config->get('turbo_global_png_image'));	
+			} else {
+				$image->save(DIR_IMAGE . $image_new);
+			}
+		//opencart turbo end 
+	]]></add>
+	</operation>
+</file>	
+
+
+<file path="catalog/controller/startup/startup.php">
+	<operation error="skip">
+	<search><![CDATA[$this->registry->set('cart', new Cart\Cart($this->registry));]]></search>
+		<add position="after"><![CDATA[
+			$turbo = new Turbo\Turbo($this->registry);
+		]]></add>
+	</operation>
+</file>
+
+
+<file path="system/library/response.php">
+	<operation error="skip">
+	<search><![CDATA[if ($this->output) {]]></search>
+		<add position="after"><![CDATA[
+		//opencart turbo start	
+		if($this->filename) {
+			$page_data = [
+				'content' => $this->output,
+				'headers' => $this->headers,
+				'time' => round((microtime(true) - $this->startttime),5)
+			 ];				
+			file_put_contents($this->filename, json_encode($page_data));	
+		}
+		//opencart turbo start	
+	]]></add>
+	</operation>		
+	
+	<operation error="skip">
+	<search><![CDATA[	public function setOutput($output) {]]></search>
+		<add position="before"><![CDATA[
+		public function setCache($filename, $startttime) {
+			$this->filename = $filename;
+			$this->startttime = $startttime;
+		}
+	]]></add>
+	</operation>	
+	
+	<operation error="skip">
+	<search><![CDATA[private $output;]]></search>
+		<add position="before"><![CDATA[
+			private $filename;
+			private $startttime;
+	]]></add>
+	</operation>
+</file>
+
+<file path="system/library/image.php">
+	<operation>
+	<search><![CDATA[public function save($file, $quality = 90) {]]></search>
+		<add position="replace"><![CDATA[
+		//opencart turbo start
+			public function save($file, $quality = 90, $png_compress = 0) {
+		//opencart turbo end 	
+	]]></add>
+	</operation>
+	<operation>
+	<search><![CDATA[imagepng($this->image, $file);]]></search>
+		<add position="replace"><![CDATA[
+		//opencart turbo start
+			imagepng($this->image, $file, $png_compress);
+		//opencart turbo end 	
+	]]></add>
+	</operation>
+</file>
+<file path="catalog/model/catalog/product.php">
+	<operation>
+	<search><![CDATA[
+		public function updateViewed($product_id) {
+	]]></search>
+	<add position="after"><![CDATA[
+	//opencart turbo start
+		if ($this->config->get('turbo_count_off') && $this->config->get('turbo_status')) 
+			return;
+		//opencart turbo end 	
+	]]></add>
+	</operation>
+</file>
+
+</modification>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <name>NeoSeo Redirect Manager</name>
+    <version>12</version>
+    <code>soforp-redirect-manager</code>
+    <author>Alexander Sorokin</author>
+
+    <file path="admin/controller/common/column_left.php">
+        <operation error="skip">
+            <search><![CDATA[if ($this->user->hasPermission('access', 'tool/backup')) {]]></search>
+            <add position="before"><![CDATA[			/* NeoSeo Redirect Manager - begin */
+			if( $this->user->hasPermission('access','tool/soforp_redirect_manager') && isset($this->session->data['token']) ) {
+				$this->language->load("tool/soforp_redirect_manager");
+				if( $this->config->get("soforp_redirect_manager_status") ) {
+					if ($this->user->hasPermission('access', 'tool/soforp_redirect_manager')) {
+						$tool[] = array(
+							'name'	   => $this->language->get('heading_title'),
+							'href'     => $this->url->link('tool/soforp_redirect_manager', 'token=' . $this->session->data['token'], true),
+							'children' => array()
+						);
+					}
+				}
+			}
+			/* NeoSeo Redirect Manager - begin */]]></add>
+        </operation>
+    </file>
+
+
+    <file path="system/engine/front.php">
+        <operation>
+            <search><![CDATA[public function dispatch]]></search>
+            <add position="after"> <![CDATA[
+        /* NeoSeo Redirect Manager - begin */
+        if ( ( defined('REDIRECT_ENABLED') || (!defined('HTTP_CATALOG') && isset($_SERVER['HTTP_HOST']) ) ) && $this->registry->get("config")->get('soforp_redirect_manager_status') == 1 ) {
+            $this->registry->get("load")->model('tool/soforp_redirect_manager');
+            $this->registry->get("model_tool_soforp_redirect_manager")->checkUrl();
+        }
+        /* NeoSeo Redirect Manager - end */
+                ]]></add>
+        </operation>
+    </file>
+</modification>

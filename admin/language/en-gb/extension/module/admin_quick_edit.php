@@ -1,0 +1,151 @@
+<?php
+// Heading
+$_['heading_title']                    	= 'Admin Quick Edit Pro';
+$_['heading_license']                   = 'Activation module';
+
+// Text
+$_['text_module']                       = 'Modules';
+$_['text_success']                     	= 'Module settings updated successfully!';
+$_['text_success_license']      		= 'Module "Admin Quick Edit Pro" - has been successfully activated!';
+$_['text_success_data']                 = 'Success: Settings updated!';
+$_['text_license_activate']             = 'Activation module "Admin Quick Edit Pro"';
+$_['text_edit']                        	= 'Module settings';
+$_['text_secret_key']              		= 'Manual to activation, you can read the article <a href="http://maxystore.com/license-product-info.html" target="_blanck" class="btn btn-default">Rules for the purchase of licensed products</a>';
+$_['text_license_info'] 				= 'After receiving the data for activation, enter in the appropriate fields the following data:<br /><ol><li>Order ID;</li><li>Product Code;</li><li>Activation Key;</li></ol><br />In case you have any questions on obtaining data for the activation email directly to the address:<ol><li>support@maxystore.com</li><li>maxystore.com@gmail.com</li></ol>Remember that the module will only work on the domain that you specified when you receive the activation key!';
+$_['text_clipboard']                 	= 'Copy Clipboard';
+$_['text_name_setting']                 = 'Parameter Name';
+$_['text_name_settings']                = 'Quick Edit';
+$_['text_quick_menu']                	= 'Magic Editors';
+$_['text_seo_manager']                	= 'SEO Manager';
+
+// Header
+$_['header_general']         			= 'General Settings';
+$_['header_category']               	= 'Categories';
+$_['header_product']                	= 'Products';
+$_['header_filter']                		= 'Filter';
+$_['header_attribute']					= 'Attributes';
+$_['header_option']						= 'Options';
+$_['header_manufacturer']				= 'Manufacturers';
+$_['header_review']						= 'Reviews';
+$_['header_information']				= 'Informations';
+$_['header_customer']					= 'Customers';
+$_['header_order']						= 'Orders';
+
+// Entry
+$_['entry_activation_secret_key']       = 'Secret Key';
+$_['entry_order_id']        			= 'Order ID';
+$_['entry_product_license_code']        = 'Product Code';
+$_['entry_license_key']        			= 'Activation Key';
+$_['entry_sales_number']        		= 'Sales statistics amount';
+$_['entry_add_stats_customer']        	= 'Customers Chart';
+$_['entry_add_stats_total']        		= 'Total Ammount Chart';
+$_['entry_add_stats_comlete']        	= 'Chart Complete Orders';
+$_['entry_add_stats_processing']        = 'Chart Processing Order';
+$_['entry_add_stats_abandoned']        	= 'Chart Abandoned Orders';
+$_['entry_quick_category']              = 'Enable quick edit categories';
+$_['entry_image']                	  	= 'Image';
+$_['entry_category_name']               = 'Category Name';
+$_['entry_sort_order']               	= 'Sort Order';
+$_['entry_category_top']               	= 'Top Menu';
+$_['entry_status']               		= 'Status';
+$_['entry_general']               		= 'General Data';
+$_['entry_seo']               			= 'SEO Keyword';
+$_['entry_category_parent']             = 'Parent Category';
+$_['entry_filter']             			= 'Filter';
+$_['entry_store']             			= 'Stores';
+$_['entry_design']             			= 'Design';
+$_['entry_quick_product']               = 'Enable quick edit products';
+$_['entry_product_name']                = 'Product Name';
+$_['entry_product_category']            = 'Categories';
+$_['entry_product_manufacturer']        = 'Manufacturer';
+$_['entry_product_model']        		= 'Model';
+$_['entry_product_price']        		= 'Price';
+$_['entry_product_quantity']        	= 'Quantity';
+$_['entry_product_code']        		= 'Codes';
+$_['entry_product_tax']        			= 'Location, Tax';
+$_['entry_product_stock']        		= 'Stock, Shipping';
+$_['entry_date_added']        			= 'Date Available';
+$_['entry_product_weight']        		= 'Size, Weight';
+$_['entry_product_download']        	= 'Download';
+$_['entry_product_related']        		= 'Related';
+$_['entry_product_attribute']        	= 'Attribute';
+$_['entry_product_option']        		= 'Option';
+$_['entry_product_discount']        	= 'Discount';
+$_['entry_product_special']        		= 'Special';
+$_['entry_product_images']        		= 'Images';
+$_['entry_product_reward']        		= 'Reward';
+$_['entry_product_view']        		= 'Product View';
+$_['entry_product_model_required']  	= 'Model Required';
+$_['entry_quick_filter']                = 'Enable quick edit filters';
+$_['entry_filter_name']               	= 'Filter Group Name';
+$_['entry_filter_value']               	= 'Filter Values';
+$_['entry_quick_attribute']             = 'Enable quick edit attributes';
+$_['entry_attribute_name']              = 'Attribute Name';
+$_['entry_attribute_attribute_group']   = 'Attribute Group';
+$_['entry_quick_attribute_group']       = 'Enable quick edit attribute groups';
+$_['entry_attribute_group_name']        = 'Attribute Group Name';
+$_['entry_quick_option']                = 'Enable quick edit options';
+$_['entry_option_name']               	= 'Option Name';
+$_['entry_option_value']               	= 'Option Value';
+$_['entry_quick_manufacturer']          = 'Enable quick edit manufacturers';
+$_['entry_manufacturer_name']           = 'Manufacturer Name';
+$_['entry_quick_review']          		= 'Enable quick edit reviews';
+$_['entry_review_product']           	= 'Product';
+$_['entry_review_author']           	= 'Review Author';
+$_['entry_review_rating']           	= 'Rating';
+$_['entry_review_text']           		= 'Review Text';
+$_['entry_quick_information']          	= 'Enable quick edit informations';
+$_['entry_title']           			= 'Title';
+$_['entry_bottom']           			= 'Bottom';
+$_['entry_status']           			= 'Status';
+$_['entry_information_view']           	= 'Information View';
+$_['entry_quick_customer']          	= 'Enable quick edit customers';
+$_['entry_customer_name']           	= 'Customer Name';
+$_['entry_customer_email']           	= 'E-Mail';
+$_['entry_customer_group']           	= 'Customer Group';
+$_['entry_customer_phone']           	= 'Telephone, Fax';
+$_['entry_customer_password']           = 'Password';
+$_['entry_customer_field']           	= 'Custom Field';
+$_['entry_customer_rss']           		= 'Newsletter';
+$_['entry_customer_approved']           = 'Approved';
+$_['entry_customer_address']           	= 'Address';
+$_['entry_customer_history']           	= 'History';
+$_['entry_customer_transaction']        = 'Transaction';
+$_['entry_customer_reward']        		= 'Reward Points';
+$_['entry_customer_ip']        			= 'IP Address';
+$_['entry_quick_order']          		= 'Enable quick edit orders';
+$_['entry_order_product']          		= 'Add/Delete Products';
+$_['entry_order_product_name']          = 'Product Name';
+$_['entry_order_product_model']         = 'Model';
+$_['entry_order_product_quantity']      = 'Quantity';
+$_['entry_order_product_price']         = 'Price';
+$_['entry_order_product_total']         = 'Total';
+$_['entry_order_payment']          		= 'Payment Details';
+$_['entry_order_shipping']          	= 'Shipping Details';
+$_['entry_order_payment_method']        = 'Payment Method';
+$_['entry_order_shipping_method']       = 'Shipping Method';
+$_['entry_order_customer_detail']       = 'Customer Details';
+$_['entry_favorite']          			= 'Block quick access to the admin sections';
+$_['entry_clear_cache']          		= 'Management reset data cache';
+$_['entry_add_stats']          			= 'Advanced statistics on main';
+$_['entry_chart_type']          		= 'Number of blocks with statistics';
+$_['entry_add_stats_left']          	= 'Advanced statistics in the left column';
+$_['entry_multiupload_image']          	= 'Multiupload Image';
+$_['entry_default_quantity']          	= 'Quantity products default';
+$_['entry_default_min_quantity']        = 'Minimum quantity products default';
+$_['entry_default_stock']        		= 'Stock default';
+$_['entry_default_shipping']        	= 'Shipping default';
+
+// Tab
+$_['tab_info']   						= 'Information';
+$_['tab_license']   					= 'Activation';
+
+// Help
+$_['help_default_quantity']          	= 'When you add a new product, the \'Quantity\' field will automatically be filled with the specified value.';
+$_['help_default_min_quantity']         = 'When you add a new product, the \'Minimum quantity\' field will automatically be filled with the specified value.';
+$_['help_default_stock']         		= 'When you add a new product, option \'Subtract Stock\' default.';
+$_['help_default_shipping']         	= 'When you add a new product, option \'Requires Shipping\' default.';
+
+// Error
+$_['error_permission']                 	= 'Warning: You do not have permission to modify settings Admin Quick Edit Pro!';
+$_['error_license']    					= 'The license key does not belong to this domain or incorrect order ID or product code or secret key!';

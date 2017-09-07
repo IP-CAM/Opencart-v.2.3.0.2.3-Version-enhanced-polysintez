@@ -1,0 +1,120 @@
+.categorywall {
+	margin-bottom: 20px;
+}
+.categorywall .categorywall_thumbnail > a {
+	font-size: 18px;
+	font-weight: normal;
+	position: relative;
+}
+
+.categorywall.covers .categorywall_thumbnail {
+    position:relative;
+    overflow:hidden;
+	padding-right: 15px;
+	padding-left: 15px;
+	
+}
+.categorywall img{
+	margin: 0 auto;
+}
+
+.categorywall .product-thumb {
+	padding: 10px 10px 20px 10px;
+    height: 250px;
+    overflow: hidden;
+}
+ 
+.categorywall.covers .caption {
+    position:absolute;
+    top:0;
+    right:0;
+    background:rgba(66, 139, 202, 0.75);
+    width:100%;
+    height:100%;
+    padding: 10px 10px 20px 10px ;
+    display: none;
+    text-align:center;
+    color:#fff !important;
+    z-index:2;
+
+}
+.categorywall.covers .categorywall_thumbnail > a.parent {
+	z-index: 3;
+	display: block;
+}
+.categorywall.covers .categorywall_thumbnail:hover > a.parent {
+color: #fff;
+}
+
+
+.categorywall.covers .categorywall_thumbnail > img {
+    margin-bottom: 15px;
+}
+.categorywall.covers .caption  ul {
+	margin: 0;
+	padding: 10px;
+}
+.categorywall  ul li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: left;
+}
+
+.categorywall.covers .caption  ul li  a{
+	color: #fff;
+	font-size: 14px;
+	line-height: 16px;
+}
+.categorywall.wide .categorywall_thumbnail  > a:first-child {
+	margin-bottom: 10px;
+    display: block;
+}
+.categorywall .half a + div + a {
+	width: 50%;
+	display: inline-block;
+	float: left;
+}
+.categorywall .children {
+	width: 49%;
+	display: inline-block;
+	float: left;
+}
+
+.categorywall.wide > div { 
+	min-height: 265px;
+}
+.categorywall .children > ul  {
+	margin: 0 0 0 10px;
+	padding: 0;
+}
+.categorywall .children > ul > li{
+	 border-bottom: 1px solid #ddd;
+}
+.categorywall .children > ul > li:hover{
+	background: #FFFFDD;
+}
+.categorywall .children > ul > li > a{
+	    line-height: 28px;
+		display:block;
+		width: 100%;
+		position: relative;
+		font-size: 14px;
+}
+.categorywall .children > ul > li > a .sub{
+    position: absolute;
+    right: 5px;
+    top: 8px;
+}
+
+.categorywall a:hover {
+	text-decoration: underline;
+}
+
+.categorywall .category_name {
+    padding: 10px 0;
+}
+
+.categorywall.wide .category_name {
+    padding: 0;
+}

@@ -1,0 +1,151 @@
+<?php
+// Heading
+$_['heading_title']                    	= 'Менеджеры OpenCart (PRO версия)';
+$_['heading_license']                   = 'Активация модуля';
+
+// Text
+$_['text_module']                       = 'Модули';
+$_['text_success']                     	= 'Настройки менеджеров успешно обновлены!';
+$_['text_success_license']      		= 'Модуль "Менеджеры OpenCart" - успешно активирован!';
+$_['text_success_data']                 = 'Настройки успешно обновлены!';
+$_['text_license_activate']             = 'Активация модуля "Менеджеры OpenCart"';
+$_['text_edit']                        	= 'Настройки модуля';
+$_['text_secret_key']              		= 'Подробная инструкция получения данных для активации, дана в статье <a href="http://maxystore.com/license-product-info.html" target="_blanck" class="btn btn-default">Правила покупки лицензионных товаров</a>';
+$_['text_license_info'] 				= 'После получения данных для активации, введите в соответствующие поля следующие данные:<br /><ol><li>№ заказа;</li><li>Код товара;</li><li>Ключ активации;</li></ol><br />В случае возникновения вопросов по получению данных для активации, пишите непосредственно на почту:<ol><li>support@maxystore.com</li><li>maxystore.com@gmail.com</li></ol>Помните, что модуль будет работать только на том домене, который вы указали при получении ключа активации!';
+$_['text_clipboard']                	= 'Скопировать секретный ключ';
+$_['text_name_setting']                 = 'Название параметра';
+$_['text_name_settings']                = 'Быстрое редактирование';
+$_['text_quick_menu']                	= 'Менеджеры';
+$_['text_seo_manager']                	= 'SEO Менеджер';
+
+// Header
+$_['header_general']         			= 'Общие настройки';
+$_['header_category']               	= 'Категории';
+$_['header_product']                	= 'Товары';
+$_['header_filter']                		= 'Фильтр';
+$_['header_attribute']					= 'Атрибуты';
+$_['header_option']						= 'Опции';
+$_['header_manufacturer']				= 'Производители';
+$_['header_review']						= 'Отзывы';
+$_['header_information']				= 'Информационные статьи';
+$_['header_customer']					= 'Покупатели';
+$_['header_order']						= 'Заказы';
+
+// Entry
+$_['entry_activation_secret_key']     	= 'Секретный ключ';
+$_['entry_order_id']        			= '№ заказа';
+$_['entry_product_license_code']    	= 'Код товара';
+$_['entry_license_key']        			= 'Ключ активации';
+$_['entry_sales_number']        		= 'Статистика продаж в виде суммы';
+$_['entry_add_stats_customer']        	= 'График покупателей';
+$_['entry_add_stats_total']        		= 'График общей суммы';
+$_['entry_add_stats_comlete']        	= 'График оплаченных заказов';
+$_['entry_add_stats_processing']        = 'График заказов в обработке';
+$_['entry_add_stats_abandoned']        	= 'График брошенных заказов';
+$_['entry_quick_category']              = 'Быстрое редактирование категорий';
+$_['entry_image']                	  	= 'Изображение';
+$_['entry_category_name']               = 'Название категории';
+$_['entry_sort_order']               	= 'Порядок сортировки';
+$_['entry_category_top']               	= 'Главное меню';
+$_['entry_status']               		= 'Статус';
+$_['entry_general']               		= 'Общие данные';
+$_['entry_seo']               			= 'SEO URL (ЧПУ)';
+$_['entry_category_parent']             = 'Родительская категория';
+$_['entry_filter']             			= 'Фильтр';
+$_['entry_store']             			= 'Магазины';
+$_['entry_design']             			= 'Дизайн';
+$_['entry_quick_product']               = 'Быстрое редактирование товаров';
+$_['entry_product_name']                = 'Название товара';
+$_['entry_product_category']            = 'Категории';
+$_['entry_product_manufacturer']        = 'Производитель';
+$_['entry_product_model']        		= 'Модель';
+$_['entry_product_price']        		= 'Цена';
+$_['entry_product_quantity']        	= 'Количество';
+$_['entry_product_code']        		= 'Коды';
+$_['entry_product_tax']        			= 'Расположение, Налоги';
+$_['entry_product_stock']        		= 'Склад, Доставка';
+$_['entry_date_added']        			= 'Дата поступления';
+$_['entry_product_weight']        		= 'Размеры, Вес';
+$_['entry_product_download']        	= 'Загрузки';
+$_['entry_product_related']        		= 'Рекомендуемые';
+$_['entry_product_attribute']        	= 'Атрибуты';
+$_['entry_product_option']        		= 'Опции';
+$_['entry_product_discount']        	= 'Скидки';
+$_['entry_product_special']        		= 'Акции';
+$_['entry_product_images']        		= 'Изображения';
+$_['entry_product_reward']        		= 'Бонусные баллы';
+$_['entry_product_view']        		= 'Просмотр товара';
+$_['entry_product_model_required']      = 'Модель обязательное поле';
+$_['entry_quick_filter']                = 'Быстрое редактирование фильтров';
+$_['entry_filter_name']               	= 'Название группы фильтра';
+$_['entry_filter_value']               	= 'Значения фильтра';
+$_['entry_quick_attribute']             = 'Быстрое редактирование атрибутов';
+$_['entry_attribute_name']              = 'Название атрибута';
+$_['entry_attribute_attribute_group']   = 'Группа атрибута';
+$_['entry_quick_attribute_group']       = 'Быстрое редактирование групп атрибутов';
+$_['entry_attribute_group_name']        = 'Название группы атрибутов';
+$_['entry_quick_option']                = 'Быстрое редактирование опций';
+$_['entry_option_name']               	= 'Название опции';
+$_['entry_option_value']               	= 'Значения опции';
+$_['entry_quick_manufacturer']          = 'Быстрое редактирование производителей';
+$_['entry_manufacturer_name']           = 'Название производителя';
+$_['entry_quick_review']          		= 'Быстрое редактирование отзывов';
+$_['entry_review_product']           	= 'Товар';
+$_['entry_review_author']           	= 'Автор отзыва';
+$_['entry_review_rating']           	= 'Оценка';
+$_['entry_review_text']           		= 'Текст отзыва';
+$_['entry_quick_information']          	= 'Быстрое редактирование информационных статей';
+$_['entry_title']           			= 'Название статьи';
+$_['entry_bottom']           			= 'Низ сайта';
+$_['entry_status']           			= 'Статус';
+$_['entry_information_view']           	= 'Просмотр статьи';
+$_['entry_quick_customer']          	= 'Быстрое редактирование покупателей';
+$_['entry_customer_name']           	= 'ФИО покупателя';
+$_['entry_customer_email']           	= 'E-Mail';
+$_['entry_customer_group']           	= 'Группа покупателей';
+$_['entry_customer_phone']           	= 'Телефон, Факс';
+$_['entry_customer_password']           = 'Пароль';
+$_['entry_customer_field']           	= 'Настраиваемые поля';
+$_['entry_customer_rss']           		= 'Подписка';
+$_['entry_customer_approved']           = 'Активация покупателя';
+$_['entry_customer_address']           	= 'Адреса';
+$_['entry_customer_history']           	= 'История';
+$_['entry_customer_transaction']        = 'Финансовые операции';
+$_['entry_customer_reward']        		= 'Бонусные баллы';
+$_['entry_customer_ip']        			= 'IP Адреса';
+$_['entry_quick_order']          		= 'Быстрое редактирование заказов';
+$_['entry_order_product']          		= 'Добавление/Удаление товаров';
+$_['entry_order_product_name']          = 'Название товара';
+$_['entry_order_product_model']         = 'Модель товара';
+$_['entry_order_product_quantity']      = 'Кол-во товара в заказе';
+$_['entry_order_product_price']         = 'Цена товара';
+$_['entry_order_product_total']         = 'Общая сумма за товар';
+$_['entry_order_payment']          		= 'Детали оплаты';
+$_['entry_order_shipping']          	= 'Детали доставки';
+$_['entry_order_payment_method']        = 'Метод оплаты';
+$_['entry_order_shipping_method']       = 'Метод доставки';
+$_['entry_order_customer_detail']       = 'Данные покупателя';
+$_['entry_favorite']          			= 'Блок быстрого доступа к разделам админки';
+$_['entry_clear_cache']          		= 'Управление сбросом кеш данных';
+$_['entry_add_stats']          			= 'Расширенная статистика на главной';
+$_['entry_chart_type']          		= 'Количество блоков со статистикой';
+$_['entry_add_stats_left']          	= 'Расширенная статистика в левой колонке';
+$_['entry_multiupload_image']          	= 'Использовать массовую загрузку изображений';
+$_['entry_default_quantity']          	= 'Кол-во товаров по умолчанию';
+$_['entry_default_min_quantity']        = 'Мин. кол-во товаров по умолчанию';
+$_['entry_default_stock']        		= 'Вычитать со склада по умолчанию';
+$_['entry_default_shipping']        	= 'Доставка по умолчанию';
+
+// Tab
+$_['tab_info']   						= 'Информация';
+$_['tab_license']   					= 'Активация';
+
+// Help
+$_['help_default_quantity']          	= 'При добавлении нового товара, поле \'Количество\' будет автоматически заполнено указанным значением.';
+$_['help_default_min_quantity']         = 'При добавлении нового товара, поле \'Минимальное количество\' будет автоматически заполнено указанным значением.';
+$_['help_default_stock']         		= 'При добавлении нового товара, опция \'Вычитать со склада\' по умолчанию.';
+$_['help_default_shipping']         	= 'При добавлении нового товара, опция \'Требуется доставка\' по умолчанию.';
+
+// Error
+$_['error_permission']                 	= 'Внимание: У Вас недостаточно прав для управления волшебными редакторами!';
+$_['error_license']    					= 'Ключ активации не принадлежит этому домену или неверный № заказа, код товара либо секретный ключ!';

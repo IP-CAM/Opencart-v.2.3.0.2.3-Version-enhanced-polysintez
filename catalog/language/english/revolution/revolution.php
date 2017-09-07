@@ -1,0 +1,160 @@
+<?php
+
+// Heading
+$_['textcart_0']  			 				= 'The cart is empty';
+$_['textcart_1']   		 					= 'In cart %s item';
+$_['textcart_2']   		 					= 'In cart %s items';
+$_['textcart_3']  			 				= 'In cart %s items';
+$_['heading_cartpopup_title_empty']		    = 'Shopping cart';
+$_['popuporder_heading_title']            	= 'Quick order';
+$_['popupphone_heading_title']            	= 'Order callback';
+$_['popupview_heading_title']            	= 'More info';
+
+// Button
+$_['button_shopping']		   				= 'Continue shopping';
+$_['button_checkout']		   				= 'Checkout';
+$_['button_checkout_popupphone']		   	= 'Order callback';
+$_['button_upload']            				= 'Upload file';
+$_['button_compare_out']            		= 'Remove from comparison';
+$_['button_wishlist_out']            		= 'Remove from bookmarks';
+
+// Text
+$_['search_in_category']          			= 'All';
+$_['search_in_category_text_all']           = 'All';
+$_['text_cartpopup_empty']       			= 'The cart is empty';
+$_['text_items']       		         		= '<i class="fa fa-shopping-basket"></i><span class="hidden-xs">Shopping<span class="hidden-md"> cart</span></span>: %s';
+$_['text_cartpopup_points']      			= 'Reward points: %s';
+$_['text_price']               				= 'Price:';
+$_['text_itogo']               				= 'Total:';
+$_['text_reward']              				= 'Reward points:';
+$_['text_points']              				= 'Price including points:';
+$_['text_tax']                 				= 'Without taxes:';
+$_['text_discount']            				= ' pieces or more: ';
+$_['text_option']              				= 'Available options:';
+$_['text_minimum']             				= 'Minimum product order %s';
+$_['text_select']              				= ' --- Selection --- ';
+$_['text_success_order']	   				= '<p>Your order is processed.</p><p>Manager will contact you shortly.</p><p>Thank you for shopping!</p>';
+$_['text_loading']             				= 'Loading...';
+$_['text_zakaz_not']          				= 'The product is out of stock! ';
+$_['text_revcompare']      					= '<i class="fa fa-bar-chart"></i><span class="hidden-xs hidden-sm">Compare</span><sup>%s</sup>';
+$_['text_revwishlist']      				= '<i class="fa fa-heart"></i><span class="hidden-xs hidden-sm">Bookmarks</span><sup>%s</sup>';
+$_['text_mail_firstname']		   			= 'Name:';
+$_['text_mail_telephone']		   			= 'Phone:';
+$_['text_mail_email']			   			= 'E-mail:';
+$_['text_mail_comment']			   			= 'Comment:';
+$_['text_mail_new_popupphone']			   	= 'Order callback';
+$_['text_success_order_popupphone']	   		= '<p>Callback is successfully received.</p><p>Manager will contact you shortly.</p>';
+$_['text_date_added_asc']   				= 'By date (old > new)';
+$_['text_date_added_desc']  				= 'By date (new > old)';
+$_['text_ajaxsearch_model'] 				= 'Model:'; 
+$_['text_ajaxsearch_manufacturer'] 			= 'Manufacturer:'; 
+$_['text_ajaxsearch_price'] 				= 'Price:'; 
+$_['text_ajaxsearch_stock'] 				= 'Availability:'; 
+$_['text_ajaxsearch_rating'] 				= 'Rating:';
+$_['text_reviews_1']                        = '%s review';
+$_['text_reviews_2']                        = '%s reviews';
+$_['text_reviews_3']                        = '%s reviews';
+$_['entry_answer']   						= 'Administrator';
+$_['text_relblogs']   						= 'Articles';
+
+// Enter
+$_['enter_firstname']		   				= 'Name:';
+$_['enter_telephone']		   				= 'Phone:';
+$_['enter_email']			   				= 'E-mail:';
+$_['enter_comment']			   				= '<span class="hidden-xs">Comment:</span><span class="hidden-sm hidden-md hidden-lg">Comment:</span>';
+$_['entry_quantity']		   				= 'Quantity:';
+
+// Error
+$_['error_stock']                    		= 'Products marked with *** are absent in the right amount, or not available!';
+$_['error_minimum']                  		= 'The minimum number for ordering goods %s is %s!';
+$_['error_firstname']          				= 'Error Name!';
+$_['error_email']              				= 'Error Е-mail!';
+$_['error_telephone']          				= 'Error Phone!';
+$_['error_comment']            				= 'Error Comment!';
+$_['error_option']             				= '%s is required!';
+
+$_['button_view']              = 'More';
+$_['text_price']               = 'Price:';
+$_['text_manufacturer']        = 'Manufacturer:';
+$_['text_model']               = 'Model:';
+$_['text_reward']              = 'Reward points:';
+$_['text_points']              = 'Price including points:';
+$_['text_stock']               = 'Availability:';
+$_['text_instock']             = 'In stock';
+$_['text_tax']                 = 'Tax free:';
+$_['text_option']              = 'Available options';
+$_['text_minimum']             = 'Minimum product order %s';
+$_['text_no_reviews']          = 'No reviews.';
+$_['text_select']              = ' --- Selection --- ';
+$_['text_loading']             = 'Loading...';
+$_['entry_qty']                = 'Quantity';
+$_['tab_description']          = 'Description';
+$_['tab_attribute']            = 'Attributes';
+$_['tab_review']               = 'Reviews (%s)';
+
+$_['text_countdown'] = 'Promotion ends:';
+
+$_['text_account_account'] = 'Account';
+$_['text_footer_popup_phone_tooltip'] = 'Order callback';
+$_['text_header_back'] = 'Back';
+$_['text_header_information'] = 'Information';
+$_['text_header_revpopup_phone'] = 'Order callback';
+$_['text_header_menu2_heading'] = 'Catalog';
+$_['text_not_found_message'] = '<p>Mistyped the address or this page no longer exists, perhaps never existed..</p><p>Check the address and <a href="/">start from the home page</a>.</p>';
+$_['text_contact_ourcontacts'] = 'Our contacts:';
+$_['text_sitemap_last'] = 'Latest';
+$_['text_sitemap_best'] = 'Bestsellers';
+$_['text_sitemap_special'] = 'Specials';
+$_['text_sitemap_blog'] = 'News';
+$_['text_sitemap_review'] = 'Reviews';
+$_['text_sitemap_contact'] = 'Contacts';
+$_['text_catalog_stiker_netu'] = 'Out of stock';
+$_['text_catalog_stiker_last'] = 'New';
+$_['text_catalog_stiker_best'] = 'Best';
+$_['text_catalog_revpopup_purchase'] = 'Quick order';
+$_['text_catalog_revpopup_view'] = 'Quick view';
+$_['text_catalog_price_na_zakaz'] = 'Price on request';
+$_['text_compare_onlyrazn'] = 'Only the differences';
+$_['text_compare_otmena'] = 'Cancel';
+$_['text_compare_filter'] = 'Filter';
+$_['text_compare_tovar'] = 'Product';
+$_['text_compare_trash_tooltip'] = 'Remove from comparison';
+$_['text_product_rating'] = 'Rating:';
+$_['text_product_artikul'] = 'SKU:';
+$_['text_product_dostupno'] = 'Available:';
+$_['text_product_ves'] = 'Weight:';
+$_['text_product_razmers'] = 'Dimensions (L х W х H):';
+$_['text_product_all_attribs'] = 'Show all attributes';
+$_['text_product_all_stoimost'] = 'Price:';
+$_['text_product_bonus_tooltip'] = 'Accumulate bonuses for purchases and pay for their orders';
+$_['text_product_bonusov'] = 'bonuses';
+$_['text_product_instock'] = 'In stock';
+$_['text_product_outstock'] = 'Out of stock';
+$_['text_product_kolichvo'] = 'Quantity:';
+$_['text_product_wr_review'] = 'Write a review';
+$_['text_product_otmena'] = 'Cancel';
+$_['text_product_oshibka'] = 'Error';
+$_['text_product_spasibo_otz'] = 'Thank you for review';
+$_['text_revmenu_manufs'] = 'Manufacturers';
+$_['text_revpopuplogin_autoriz'] = 'Log in';
+$_['text_revpopuplogin_email'] = 'E-mail:';
+$_['text_revpopuplogin_pass'] = 'Password:';
+$_['text_revpopuplogin_otmena'] = 'Cancel';
+$_['text_revpopuplogin_enter'] = 'Enter';
+$_['text_revpopuplogin_close'] = 'Close';
+$_['text_revsubscribe_email_tooltip'] = 'E-mail';
+$_['text_revsubscribe_spasibo'] = 'Thank you for subscribing';
+$_['text_oppro_blog'] = 'Blog';
+$_['text_revpopuplogin_forgotten'] = 'Forgot your password?';
+$_['text_loadmore'] = 'Load more';
+$_['text_yes'] = 'Yes';
+$_['text_no'] = 'No';
+$_['text_relblogs'] = 'Статьи';
+$_['text_shtuki'] = 'pcs.';
+$_['text_model_option'] = 'Model';
+$_['text_price_option'] = 'Price';
+$_['text_option_option'] = 'Option';
+$_['text_dostupno_option'] = 'Stock';
+$_['text_quantity_option'] = 'Quantity';
+$_['text_powered_rev'] = '%s - %s &copy; %s';
+?>

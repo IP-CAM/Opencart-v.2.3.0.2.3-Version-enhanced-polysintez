@@ -1,0 +1,194 @@
+if (window.Prmn === undefined) { Prmn = {}; }
+
+Prmn.CityManager = function(options) {
+    this.switchers = [];
+    this.messages = [];
+    this.options = $.extend({}, Prmn.CityManager.DEFAULTS, options);
+    this.http_host = this.getHttpHost();
+    this.cities_popup = null;
+};
+
+Prmn.CityManager.DEFAULTS = {
+    base_path: 'auto'
+};
+
+Prmn.CityManager.prototype.addSwitcher = function(el) {
+    this.switchers.push(new Prmn.CitySwitcher(el, this));
+};
+
+Prmn.CityManager.prototype.addMessage = function(el) {
+    this.messages.push(new Prmn.CityMessage(el, this));
+};
+
+Prmn.CityManager.prototype.loadData = function() {
+    var self = this;
+    $.get(
+        this.http_host + 'index.php?route=module/progroman/city_manager/init',
+        {url: location.pathname + location.search},
+        function(json) {
+            var i, j;
+            for (i in self.switchers) {
+                self.switchers[i].setContent(json.content);
+                if (json.confirm) {
+                    self.switchers[i].setConfirm(json.confirm, json.confirm_redirect);
+                }
+            }
+            if (json.messages) {
+                for (i in json.messages) {
+                    for (j in self.messages) {
+                        self.messages[j].setContent(i, json.messages[i]);
+                    }
+                }
+            }
+            for (i in self.messages) {
+                self.messages[i].setDefault();
+            }
+        },
+        'json');
+};
+
+Prmn.CityManager.prototype.showCitiesPopup = function() {
+    var self = this;
+    if (!this.cities_popup) {
+        $.get(this.http_host + 'index.php?route=module/progroman/city_manager/cities', function(html) {
+            self.cities_popup = $(html);
+            $('body').append(self.cities_popup);
+            self.cities_popup.find('.prmn-cmngr-cities__city-name').click(function() {
+                self.setFias($(this).data('id'));
+                self.cities_popup.modal('hide');
+            });
+
+            self.cities_popup.modal('show');
+
+            var input = self.cities_popup.find('.prmn-cmngr-cities__search');
+            self.autocomplete(input);
+            input.focus();
+        }, 'html');
+    } else {
+        self.cities_popup.modal('show');
+    }
+};
+
+Prmn.CityManager.prototype.autocomplete = function(el) {
+    var xhr = false;
+    var self = this;
+    el.prmn_autocomplete({
+        'source': function(request, response) {
+            if (xhr) {
+                xhr.abort();
+            }
+
+            request = $.trim(request);
+            if (request && request.length > 2) {
+                xhr = $.get(self.http_host + 'index.php?route=module/progroman/city_manager/search&term=' + encodeURIComponent(request),
+                    function(json) {
+                        response(json);
+                    }, 'json');
+            }
+            else {
+                response([]);
+            }
+        },
+        'select': function(item) {
+            el.val(item.name);
+            self.setFias(item.value);
+            self.cities_popup.modal('hide');
+        }
+    });
+    el.siblings('ul.dropdown-menu').css({'maxHeight': 300, 'overflowY': 'auto', 'overflowX': 'hidden'});
+};
+
+Prmn.CityManager.prototype.setFias = function(id) {
+    $.get(this.http_host + 'index.php?route=module/progroman/city_manager/save&fias_id=' + id,
+        function(json) {
+            if (json.success) {
+                location.reload();
+            }
+        },
+        'json'
+    );
+};
+
+Prmn.CityManager.prototype.getHttpHost = function() {
+    if (!Prmn.CityManager.host) {
+        Prmn.CityManager.host = location.protocol + '//' + location.host + '/';
+
+        if (this.options.base_path == 'auto') {
+            var base = $('base').attr('href'), matches;
+            if (base && (matches = base.match(/^http(?:s)?:\/\/[^/]*\/(.*)/))) {
+                Prmn.CityManager.host += matches[1];
+            }
+        } else if (this.options.base_path) {
+            Prmn.CityManager.host += this.options.base_path;
+        }
+    }
+
+    return Prmn.CityManager.host;
+};
+
+Prmn.CitySwitcher = function(el, manager) {
+    this.manager = manager;
+    this.$element = el;
+    this.loaded = el.children('div').length > 0;
+    this.options = {confirm: el.data('confirm')};
+};
+
+Prmn.CitySwitcher.prototype.setContent = function(html) {
+    if (!this.loaded) {
+        html = $(html);
+        this.$element.html(html);
+        this.loaded = true;
+    }
+
+    var self = this;
+    this.$element.find('.prmn-cmngr__city').click(function() {
+        self.manager.showCitiesPopup();
+    });
+};
+
+Prmn.CitySwitcher.prototype.setConfirm = function(html, confirm_redirect) {
+    if (this.options.confirm) {
+        var confirm = $(html), self = this;
+        this.$element.append(confirm);
+        confirm.find('input[type=button]').click(function() {
+            if ($(this).data('value') == 'no') {
+                self.manager.showCitiesPopup();
+            } else if (confirm_redirect) {
+                location.href = confirm_redirect;
+            }
+            confirm.hide();
+        });
+    }
+};
+
+Prmn.CityMessage = function(el, manager) {
+    this.manager = manager;
+    this.$element = el;
+    this.key = el.data('key');
+    this.default = el.data('default');
+    this.$element.removeAttr('data-key').removeAttr('data-default');
+    this.found = false;
+};
+
+Prmn.CityMessage.prototype.setContent = function(key, html) {
+    if (this.key == key) {
+        this.$element.html(html);
+        this.found = true;
+    }
+};
+
+Prmn.CityMessage.prototype.setDefault = function() {
+    if (!this.found) {
+        this.$element.html(this.default);
+    }
+};
+
+$(function() {
+    var switchers = $('.prmn-cmngr'), messages = $('.prmn-cmngr-message');
+    if (switchers.length || messages.length) {
+        var manager = new Prmn.CityManager();
+        switchers.each(function() { manager.addSwitcher($(this)); });
+        messages.each(function() { manager.addMessage($(this)); });
+        manager.loadData();
+    }
+});

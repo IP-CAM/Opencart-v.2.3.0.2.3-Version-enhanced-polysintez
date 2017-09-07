@@ -1,0 +1,16 @@
+/*
+.simplecheckout, .simplecheckout-block-content {
+	overflow:visible !important;
+	}
+*/
+.suggestions-wrapper {
+    position: absolute !important;
+}
+
+.suggestions-input {
+    /* width: inherit; */
+    -ms-box-sizing: inherit !important;
+    -moz-box-sizing: inherit !important;
+    -webkit-box-sizing: inherit !important;
+    box-sizing: inherit !important;
+}

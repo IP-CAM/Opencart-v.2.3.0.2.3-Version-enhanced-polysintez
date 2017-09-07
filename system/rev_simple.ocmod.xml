@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+	<name>Шаблон Revolution / Фикс модуля Simple</name>
+	<code>revolution_simple</code>
+	<version>3.1</version>
+	<author>pikitos</author>
+	<link></link>
+
+	<file path="catalog/language/{ru-ru,russian}/checkout/simplecheckout.php">
+		<operation error="skip">
+			<search><![CDATA['Товаров: %s (%s)';]]></search>
+			<add position="replace"><![CDATA['<span class="hidden-xs">Корзина<span class="hidden-md"> покупок</span></span>: %s';]]></add>
+		</operation>
+		<operation error="skip">
+			<search><![CDATA[fancybox agree]]></search>
+			<add position="replace"><![CDATA[fancybox popup_html_content]]></add>
+		</operation>
+	</file>
+	<file path="catalog/language/{ru-ru,russian}/account/simpleregister.php">
+		<operation error="skip">
+			<search><![CDATA[fancybox agree]]></search>
+			<add position="replace"><![CDATA[fancybox popup_html_content]]></add>
+		</operation>
+	</file>
+	<file path="catalog/controller/checkout/simplecheckout.php">
+		<operation>
+			<search><![CDATA[$settingsGroup =]]></search>
+			<add position="after"><![CDATA[
+				$data['setting_header_cart'] = $this->config->get('revtheme_header_cart');
+				$style = '';
+				$this->load->model('tool/image');
+				$this->language->load('checkout/simplecheckout');
+				if ($data['setting_header_cart']['icontype']) {
+					if ($data['setting_header_cart']['icon'] == 'fa none') {
+						$style = ' hidden';
+					}
+					$image = '<i class="'.$data['setting_header_cart']['icon'].$style.'"></i>';
+				} else {
+					if (!$data['setting_header_cart']['image'] || $data['setting_header_cart']['image'] == 'no_image.png') {
+						$style = ' hidden';
+					}
+					$image = '<span class="heading_ico_image'.$style.'"><img src="'.$this->model_tool_image->resize($data['setting_header_cart']['image'], 21, 21).'" alt=""/></span>';
+				}
+				$heading_title = ($image . $this->language->get('text_items'));
+			]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[sprintf($this->language->get('text_items')]]></search>
+			<add position="replace"><![CDATA[sprintf($heading_title]]></add>
+		</operation>
+	</file>	
+	<file path="catalog/controller/checkout/simplecheckout_cart.php">
+		<operation>
+			<search><![CDATA[$currentTheme = $this->config->get('config_template');]]></search>
+			<add position="before"><![CDATA[
+				$data['setting_header_cart'] = $this->config->get('revtheme_header_cart');
+				$style = '';
+				$this->load->model('tool/image');
+				$this->language->load('checkout/simplecheckout');
+				if ($data['setting_header_cart']['icontype']) {
+					if ($data['setting_header_cart']['icon'] == 'fa none') {
+						$style = ' hidden';
+					}
+					$image = '<i class="'.$data['setting_header_cart']['icon'].$style.'"></i>';
+				} else {
+					if (!$data['setting_header_cart']['image'] || $data['setting_header_cart']['image'] == 'no_image.png') {
+						$style = ' hidden';
+					}
+					$image = '<span class="heading_ico_image'.$style.'"><img src="'.$this->model_tool_image->resize($data['setting_header_cart']['image'], 21, 21).'" alt=""/></span>';
+				}
+				$heading_title = ($image . $this->language->get('text_items'));
+			]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[sprintf($text_items]]></search>
+			<add position="replace"><![CDATA[sprintf($heading_title]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[if ($product['image']) {]]></search>
+			<add position="replace"><![CDATA[
+				if (!$product['option']) {
+					if ($product['image']) {
+						$image = $this->model_tool_image->resize($product['image'], $image_cart_width, $image_cart_height);
+					} else {
+						$image = $this->model_tool_image->resize('no_image.png', $image_cart_width, $image_cart_height);
+					}
+				}
+				/* if ($product['image']) {
+			]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[$image = '';]]></search>
+			<add position="after" offset="1"><![CDATA[*/]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[$option_data = array();]]></search>
+			<add position="after"><![CDATA[
+				if ($version < 220) {
+                    $image_cart_width = $this->config->get('config_image_cart_width');
+                    $image_cart_width = $image_cart_width ? $image_cart_width : 40;
+                    $image_cart_height = $this->config->get('config_image_cart_height');
+                    $image_cart_height = $image_cart_height ? $image_cart_height : 40;
+                } else {
+                    $image_cart_width = $this->config->get($this->config->get('config_theme') . '_image_cart_width');
+                    $image_cart_width = $image_cart_width ? $image_cart_width : 40;
+                    $image_cart_height = $this->config->get($this->config->get('config_theme') . '_image_cart_height');
+                    $image_cart_height = $image_cart_height ? $image_cart_height : 40;
+                }
+			]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[$option_data[] = array]]></search>
+			<add position="before"><![CDATA[
+				if (isset($option['opt_image'])) {
+					if ($option['opt_image']) {
+						$image = $option['opt_image'] ? $this->model_tool_image->resize($option['opt_image'], $image_cart_width,  $image_cart_height) : '';
+					} else {
+						if ($product['image']) {
+							$image = $this->model_tool_image->resize($product['image'], $image_cart_width, $image_cart_height);
+						} else {
+							$image = $this->model_tool_image->resize('no_image.png', $image_cart_width, $image_cart_height);
+						}
+					}
+				} else {
+					if ($product['image']) {
+						$image = $this->model_tool_image->resize($product['image'], $image_cart_width, $image_cart_height);
+					} else {
+						$image = $this->model_tool_image->resize('no_image.png', $image_cart_width, $image_cart_height);
+					}
+				}
+			]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[$option_data[] = array(]]></search>
+			<add position="after"><![CDATA['model' => (isset($option['model']) ? $option['model'] : false),]]></add>
+		</operation>
+	</file>
+	<file path="system/library/document.php">
+		<operation>
+			<search><![CDATA[public function addScript($href, $postion = 'header') {]]></search>
+			<add position="replace"><![CDATA[
+				public function addScript($href, $postion = 'header') {
+					if (preg_match('/maskedinput/', $href)) {
+						return;
+					}
+			]]></add>
+		</operation>
+	</file>
+</modification>
